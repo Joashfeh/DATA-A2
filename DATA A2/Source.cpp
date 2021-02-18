@@ -1,6 +1,7 @@
 #include <iostream>
 #include "GOManager.h"
 #include "TextParser.h"
+#include <exception>
 
 int main(void) {
 	GOManager qtree;
@@ -25,16 +26,18 @@ int main(void) {
 					i = std::stoi(input);
 					qtree.PrintNearbyGO(i);
 					std::cout << std::endl;
-				} catch (...) {
-					std::cout << "You have entered an invalid ID";
+				} catch (std::invalid_argument& e) {
+					if (input == "q") return 0;
+					std::cout << "Invalid Argument";
 				}
 				break;
 			}
 			
-		} catch (...) {
-			std::cout << "You have entered an invalid input." << std::endl;
+		} catch (std::invalid_argument& e) {
+			if (input == "q") return 0;
+			std::cout << "Invalid Argument" << std::endl;
 		}
 
-	} while (input != "Q" || input != "q");
+	} while (1);
 
 }

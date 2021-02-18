@@ -121,19 +121,19 @@ void Quad::PrintGOsInside(std::string spaces) {
 	// Type is the string used to print the Quad Type using the enum to check.
 	std::string Type;
 	switch (this->quadType) {
-	case 0:
+	case TOPL:
 		Type = "TOPL";
 		break;
-	case 1:
+	case TOPR:
 		Type = "TOPR";
 		break;
-	case 2:
+	case BOTL:
 		Type = "BOTL";
 		break;
-	case 3:
+	case BOTR:
 		Type = "BOTR";
 		break;
-	case 4:
+	case ROOT:
 		Type = "ROOT";
 		break;
 	}

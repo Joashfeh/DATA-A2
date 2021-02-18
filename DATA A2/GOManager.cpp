@@ -2,6 +2,7 @@
 #include <iostream>
 
 GOManager::GOManager() {
+	// initialise root quad in constructor with position of 100, 100
 	root = new Quad(ROOT, Position(100, 100), NULL, 200, 200, 0);
 }
 

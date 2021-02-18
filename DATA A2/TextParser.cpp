@@ -1,6 +1,7 @@
 #include "TextParser.h"
 
 // Text Parser for Object Data, using delimiters to tokenize the string input.
+// Object info must be in format of "ID,x,y"
 void TextParser(GOManager* QuadTree, std::string filename) {
 	std::ifstream pointData;
 	pointData.open(filename);
